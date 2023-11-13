@@ -95,6 +95,7 @@ class Scheduler():
             app.run(host=API_HOST, port=API_PORT, threaded=API_THREADED)
 
     def run(self):
+        # 声明tester_process、getter_process、server_process是全局变量，而不是局部变量，这时可以在方法内修改全局变量
         global tester_process, getter_process, server_process
         try:
             logger.info('starting proxypool...')
